@@ -24,6 +24,15 @@
 
                         <div class="card-body p-4">
 
+
+                            @if(session()->has('success'))
+                            <div class= "alert alert-success alert-dismissible fade show" role="alert">
+                            {{session('success') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            @endif
+
+
                             <div class="text-center mt-2">
                                 <h5 class="text-primary">Register Account</h5>
                                 <p class="text-muted"></p>
