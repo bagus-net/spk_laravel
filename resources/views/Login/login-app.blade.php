@@ -24,18 +24,37 @@
                 <div class="col-md-8 col-lg-6 col-xl-5">
                     <div class="card">
 
+                         @if(session()->has('success'))
+                            <div class= "alert alert-success alert-dismissible fade show" role="alert">
+                            {{session('success') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            @endif
+
+                            @if(session()->has('loginError'))
+                            <div class= "alert alert-danger alert-dismissible fade show" role="alert">
+                            {{session('loginError') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            @endif
+
                         <div class="card-body p-4">
                             <div class="text-center mt-2">
                                 <h5 class="text-primary">Sistem Manajemen IT MGM</h5>
                                 <p class="text-muted">Sign in to continue.</p>
                             </div>
                             <div class="p-2 mt-4">
-                                <form action="/login" method="post">
+                                <form action="{{ route('login-auth') }}" method="post">
                                     @csrf
 
                                     <div class="mb-3">
-                                        <label class="form-label" for="floatinginput">Email address</label>
-                                        <input type="email" name= floatinginput class="form-control" id="floatinginput" placeholder="name@example.com"> 
+                                        <label class="form-label" for="email">Email address</label>
+                                        <input type="email" name= email class="form-control @error ('email') is-invalid @enderror" id="email" placeholder="name@example.com" autofocus required value="{{old ('email')}}"> 
+                                        @error('email')
+                                    </div class="invalid-feedback">
+                                    {{ $message }}
+                                    </div>
+                                    @enderror
                                     </div>
 
                                     {{-- <div class="mb-3">
@@ -43,9 +62,9 @@
                                             <a href="auth-recoverpw" class="text-muted">Forgot password?</a>
                                         </div> --}}
 
-                                        <label class="form-label" for="floatingpassword">Password</label>
-                                        <input type="password" class="form-control" id="floatingpassword"
-                                            placeholder="Enter password">
+                                        <label class="form-label" for="password">Password</label>
+                                        <input type="password" name= "password"class="form-control" id="password"
+                                            placeholder="Enter password" required>
                                     </div>
 
                                     {{-- <div class="form-check">

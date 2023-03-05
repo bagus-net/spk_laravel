@@ -26,7 +26,8 @@ public function store(request$request)
     ]);
     $validatedData['password'] = Hash::make($validatedData['password']);
     User::create($validatedData);
-    $request->session()->flash('success', 'Registration succesfull! Please login');
+    
+    $request->session()->flash('success', 'Registration succesfull !! Please login');
 
     return redirect ('login');
 }
