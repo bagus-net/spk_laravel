@@ -48,8 +48,8 @@
                         <span>@lang('Users Management')</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="true">
-                        <li><a href={{ route('users.index') }}>@lang('Users')</a></li>
-                        <li><a href={{ route('roles.index') }}>@lang('Roles')</a></li>
+                        {{-- <li><a href={{ route('users.index') }}>@lang('Users')</a></li> --}}
+                        {{-- <li><a href={{ route('roles.index') }}>@lang('Roles')</a></li> --}}
                         <li><a href="tables-responsive3">@lang('Access')</a></li>
                            @can('menu-permission')
             
@@ -64,14 +64,14 @@
                         <span>@lang('Blog')</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="true">
-                        <li><a href={{ route('blog-article-category.index') }}>@lang('Article Category')</a></li>
-                        <li><a href={{ route('blog-article.index') }}>@lang('Article')</a></li>
+                        {{-- <li><a href={{ route('blog-article-category.index') }}>@lang('Article Category')</a></li>
+                        <li><a href={{ route('blog-article.index') }}>@lang('Article')</a></li> --}}
                         {{-- <li><a href="sync">@lang('Sync Vend')</a></li>
                         <li><a href="sync">@lang('Sync Email Vend')</a></li> --}}
                     </ul>
                 </li>
 
-                <li>
+                {{-- <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="uil-blogger-alt  "></i>
                         <span>@lang('Kelas')</span>
@@ -82,16 +82,16 @@
                         <li><a href={{ route('kelaseksklusifcategory.index') }}>@lang('Category Kelas Eksklusif')</a></li>
                         <li><a href={{ route('kelaseksklusif.index') }}>@lang('Kelas Eksklusif Note')</a></li>
                         {{-- <li><a href="sync">@lang('Sync Vend')</a></li>
-                        <li><a href="sync">@lang('Sync Email Vend')</a></li> --}}
+                        <li><a href="sync">@lang('Sync Email Vend')</a></li> 
                     </ul>
-                </li>
+                </li> --}}
 
                {{-- <li>
                     <a href="{{url('fpdf')}}">
                         <i class="uil-home-alt"></i>
                         <span>@lang('Fpdf')</span>
                     </a>
-                </li> --}}
+                </li> 
 
   
 
@@ -108,7 +108,7 @@
                     </ul>
                 </li>
             {{-- SIDEBAR SPK --}}
-            <li>
+            {{-- <li>
                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                     <i class="uil-blogger-alt  "></i>
                     <span>@lang('Sistem Pendukung Keputusan Komputer')</span>
@@ -120,7 +120,7 @@
                     {{-- <li><a href={{ route('users.list') }}>@lang('Users')</a></li>                     --}}
                     
                     {{-- <li><a href="sync">@lang('Sync Vend')</a></li>
-                    <li><a href="sync">@lang('Sync Email Vend')</a></li> --}}
+                    <li><a href="sync">@lang('Sync Email Vend')</a></li> --
                 </ul>
             </li>
 
@@ -139,7 +139,7 @@
                         
                         
                         {{-- <li><a href="sync">@lang('Sync Vend')</a></li>
-                        <li><a href="sync">@lang('Sync Email Vend')</a></li> --}}
+                        <li><a href="sync">@lang('Sync Email Vend')</a></li> --
                     </ul>
                 </li>
 
@@ -152,14 +152,14 @@
                         {{-- <li><a href={{ route('product-kinds.index') }}>@lang('Product Kinds')</a></li>
                         <li><a href={{ route('product-variants.index') }}>@lang('Product Variants')</a></li>
                         <li><a href={{ route('product-categorys.index') }}>@lang('Product Categorys')</a></li>
-                         --}}
+                         -
                         <li><a href={{ url('admin/product-collections') }}>@lang('Product Collections')</a></li>
                         <li><a href={{ url('admin/product-types') }}>@lang('Product Types')</a></li>
                         <li><a href={{ url('admin/product-forms') }}>@lang('Product Forms')</a></li>
                         <li><a href={{ url('admin/product-packages') }}>@lang('Product Packages')</a></li>
                         <li><a href={{ url('admin/products') }}>@lang('Products')</a></li>
                         {{-- <li><a href="sync">@lang('Sync Vend')</a></li>
-                        <li><a href="sync">@lang('Sync Email Vend')</a></li> --}}
+                        <li><a href="sync">@lang('Sync Email Vend')</a></li> 
                     </ul>
                 </li>
 
@@ -169,17 +169,17 @@
                         <span>@lang('Store')</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="true">
-                        {{-- <li><a href="#">@lang('Cart')</a></li> --}}
+                        {{-- <li><a href="#">@lang('Cart')</a></li> --
                         <li><a href={{ url('admin/orders') }}>@lang('Order History')</a></li>
                         <li><a href={{ url('admin/discount-product') }}>@lang('Discount Product')</a></li>
                         <li><a href={{ url('admin/discount-cluster') }}>@lang('Discount Promo')</a></li>
-                        {{-- <li><a href={{ url('admin/discount') }}>@lang('Discount')</a></li> --}}
+                        {{-- <li><a href={{ url('admin/discount') }}>@lang('Discount')</a></li> --
                         <li><a href={{ url('admin/flashsale') }}>@lang('Flash Sale')</a></li>
                         <li><a href={{ url('admin/freegift') }}>@lang('Set Free Gift')</a></li>
                     </ul>
-                </li>
+                </li> --}}
 
-                <li>
+                {{-- <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="uil-sync"></i>
                         <span>@lang('translation.Syncs')</span>
@@ -190,7 +190,7 @@
                         <li><a href="sync">@lang('Sync Vend')</a></li>
                         <li><a href="sync">@lang('Sync Email Vend')</a></li>
                     </ul>
-                </li>
+                </li> --}}
 
 
                 <li>
@@ -286,9 +286,9 @@
                         <i class="uil-database"></i>
                         <span>@lang('Sync Database')</span>
                     </a>
-                    <ul class="sub-menu" aria-expanded="true">
+                    {{-- <ul class="sub-menu" aria-expanded="true">
                         <li><a href={{ route('sync-product.index') }}>@lang('Sync Products')</a></li>
-                        <li><a href="#">@lang('Sync Orders')</a></li>
+                        <li><a href="#">@lang('Sync Orders')</a></li> --}}
                        
                         {{-- <li><a href="sync">@lang('Sync Vend')</a></li>
                         <li><a href="sync">@lang('Sync Email Vend')</a></li> --}}

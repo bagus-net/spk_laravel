@@ -1,11 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Spk;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\DB;
-use App\Models\Kriteria_Model;
 
 class KriteriaController extends Controller
 {
@@ -16,11 +13,7 @@ class KriteriaController extends Controller
      */
     public function index()
     {
-        $res_kriteria = Kriteria_Model::orderBy('id','DESC')->get();
-        // $res_category_kriteria = DB::select('select * from koperasi_category_kriteria');
-        //   dd($res_category_komputer);
-        $title = 'ini kriteria';
-        return view('spk.list-kriteria',compact('title','res_kriteria'));
+        //
     }
 
     /**
@@ -30,8 +23,7 @@ class KriteriaController extends Controller
      */
     public function create()
     {
-        $res_kriteria =DB :: select('select *from spk_kriteria');
-        return view('spk.add-kriteria',compact('res_kriteria'));
+        //
     }
 
     /**
@@ -42,28 +34,7 @@ class KriteriaController extends Controller
      */
     public function store(Request $request)
     {
-         $this->validate($request, [
-            'kriteria' => 'required',
-            'type_kriteria' => 'required'
-        ]);
-
-        $resinsert = DB::insert('INSERT INTO spk_kriteria (kriteria, type_kriteria )
-        VALUES ("'.$request->kriteria.'","'.$request->type_kriteria.'"); ');
-
-        if ($resinsert) {
-            return redirect()
-                ->route('kriteria.list')
-                ->with([
-                    'success' => 'New post has been created successfully'
-                ]);
-        } else {
-            return redirect()
-                ->back()
-                ->withInput()
-                ->with([
-                    'error' => 'Some problem occurred, please try again'
-                ]);
-        }
+        //
     }
 
     /**
@@ -74,10 +45,7 @@ class KriteriaController extends Controller
      */
     public function show($id)
     {
-        $res_kriteria =DB :: select('select *from spk_kriteria');
-        $res_find = DB::select('select * from spk_kriteria where id='.$id);
-        $find = $res_find[0];
-        return view('spk.show-kriteria',compact('find','res_kriteria'));
+        //
     }
 
     /**
@@ -88,10 +56,7 @@ class KriteriaController extends Controller
      */
     public function edit($id)
     {
-        $res_kriteria =DB :: select('select *from spk_kriteria');
-        $res_find = DB::select('select * from spk_kriteria where id='.$id);
-        $find = $res_find[0];
-        return view('spk.edit-kriteria',compact('find', 'res_kriteria'));
+        //
     }
 
     /**
@@ -103,32 +68,7 @@ class KriteriaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'kriteria' => 'required',
-            'type_kriteria' => 'required'
-
-        ]);
-        // dump($id);
-        // dump($request->category_kriteria);
-        // dd("ini edit");
-
-        $resupdate = DB::update('UPDATE spk_kriteria
-        set kriteria="'.$request->kriteria.'",type_kriteria= "'.$request->type_kriteria.'" WHERE id='.$id.'; ');
-
-        if ($resupdate) {
-            return redirect()
-                ->route('kriteria.list')
-                ->with([
-                    'success' => 'New post has been created successfully'
-                ]);
-        } else {
-            return redirect()
-                ->back()
-                ->withInput()
-                ->with([
-                    'error' => 'Some problem occurred, please try again'
-                ]);
-        }
+        //
     }
 
     /**
@@ -139,23 +79,6 @@ class KriteriaController extends Controller
      */
     public function destroy($id)
     {
-
-        $resdelete = DB::delete('DELETE FROM spk_kriteria WHERE id='.$id.';');
-
-        if ($resdelete) {
-            return redirect()
-                ->route('kriteria.list')
-                ->with([
-                    'success' => 'New post has been created successfully'
-                ]);
-        } else {
-            return redirect()
-                ->back()
-                ->withInput()
-                ->with([
-                    'error' => 'Some problem occurred, please try again'
-                ]);
-        }
-
+        //
     }
 }

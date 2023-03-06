@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kriteria_Model extends Model
 {
-    protected $table ='spk_kriteria';
+    use HasFactory;
+    protected $table ='kriteria';
     protected $fileable= [
-        'kriteria',
-        'type_kriteria'
-
+        'kode_kriteria',
+        'nama_kriteria',
+        'bobot'
     ];
 }

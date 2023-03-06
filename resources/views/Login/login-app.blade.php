@@ -11,11 +11,14 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-center">
-                        <a href="{{ url('index') }}" class="mb-5 d-block auth-logo">
-                            <img src="{{ URL::asset('/assets/images/logo-dark.png') }}" alt="" height="22"
-                                class="logo logo-dark">
-                            <img src="{{ URL::asset('/assets/images/logo-light.png') }}" alt="" height="22"
-                                class="logo logo-light">
+
+                        <a href="{{ route('login') }}" class="mb-5 d-block auth-logo">
+                            <span class="logo logo-dark">
+                            <img src="{{ URL::asset('/assets/images/mgm.png') }}" alt="" height="150">
+                        </span> 
+                        <span class="logo logo-light">
+                            <img src="{{ URL::asset('/assets/images/mgm.png') }}" alt="" height="150">
+                        </span>  
                         </a>
                     </div>
                 </div>
@@ -79,7 +82,7 @@
 
 
 
-                                    <div class="mt-4 text-center">
+                                    {{-- <div class="mt-4 text-center">
                                         <div class="signin-other-title">
                                             <h5 class="font-size-14 mb-3 title">Sign in with</h5>
                                         </div>
@@ -105,7 +108,7 @@
                                                 </a>
                                             </li>
                                         </ul>
-                                    </div>
+                                    </div> --}}
 
                                     <div class="mt-4 text-center">
                                         <p class="mb-0">Don't have an account ? <a href="{{ route('register') }}">
@@ -121,7 +124,7 @@
                         <p>© <script>
                                 document.write(new Date().getFullYear())
 
-                            </script> Minible. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
+                            </script> ITMGM. Created with <i class="mdi mdi-heart text-danger"></i> by Bagus Setyawan</p>
                     </div>
 
                 </div>
