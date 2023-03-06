@@ -11,7 +11,7 @@
  Target Server Version : 80030
  File Encoding         : 65001
 
- Date: 06/03/2023 14:17:10
+ Date: 06/03/2023 15:58:06
 */
 
 SET NAMES utf8mb4;
@@ -28,11 +28,12 @@ CREATE TABLE `alternatif`  (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` datetime NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of alternatif
 -- ----------------------------
+INSERT INTO `alternatif` VALUES (1, 'A1', 'PC A', NULL, '2023-03-06 15:52:53');
 
 -- ----------------------------
 -- Table structure for bobot_alternatif_kriteria
