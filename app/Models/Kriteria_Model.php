@@ -12,6 +12,7 @@ class Kriteria_Model extends Model
     protected $fileable= [
         'kode_kriteria',
         'nama_kriteria',
-        'bobot'
+        'bobot',
+        'jenis'
     ];
 }

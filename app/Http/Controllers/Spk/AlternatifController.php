@@ -16,7 +16,7 @@ class AlternatifController extends Controller
      */
     public function index()
     {
-        $res_alternatif = Alternatif_Model::orderBy('id','DESC')->get();
+        $res_alternatif = Alternatif_Model::orderBy('id','ASC')->get();
         // $res_category_alternatif = DB::select('select * from koperasi_category_alternatif');
         //   dd($res_category_alternatif);
         $title = 'ini alternatif';

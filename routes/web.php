@@ -1,15 +1,13 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\Spk\AlternatifController;
 use App\Http\Controllers\Spk\KriteriaController;
 use App\Http\Controllers\Spk\PenilaianController;
 use App\Http\Controllers\Spk\PilihanKriteriaController;
-
-
 use Illuminate\Auth\AuthenticationException;
+use Illuminate\Support\Facades\Route;
 use PhpParser\Node\Name;
 
 /*

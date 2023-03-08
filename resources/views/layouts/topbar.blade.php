@@ -5,19 +5,19 @@
             <div class="navbar-brand-box">
                 <a href="{{url('index')}}" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="{{ URL::asset('/assets/images/mgm.png') }}" alt="" height="22">
+                        <img src="{{ URL::asset('/assets/images/mgm.png') }}" alt="" height="50">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ URL::asset('/assets/images/mgm.png') }}" alt="" height="20">
+                        <img src="{{ URL::asset('/assets/images/mgm.png') }}" alt="" height="50">
                     </span>
                 </a>
 
                 <a href="{{url('index')}}" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="{{ URL::asset('/assets/images/mgm.png') }}" alt="" height="22">
+                        <img src="{{ URL::asset('/assets/images/mgm.png') }}" alt="" height="50">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ URL::asset('/assets/images/mgm.png') }}" alt="" height="20">
+                        <img src="{{ URL::asset('/assets/images/mgm.png') }}" alt="" height="50">
                     </span>
                 </a>
             </div>

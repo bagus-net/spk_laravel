@@ -35,19 +35,38 @@
 
 
         <div class="mb-3 row">
-            <label for="example-text-input" class="col-md-2 col-form-label">kriteria :</label>
+            <label for="example-text-input" class="col-md-2 col-form-label">Kode kriteria :</label>
             <div class="col-md-10">
-            <input class="form-control" type="text" name="kriteria" value="{{$find->kriteria}}" id="example-text-input" placeholder="masukan kriteria">
+            <input class="form-control" type="text" name="kode_kriteria" value="{{$find->kode_kriteria}}" id="example-text-input" placeholder="masukan kode kriteria">
             </div>
         </div>
 
 
             <div class="mb-3 row">
-              <label for="example-text-input" class="col-md-2 col-form-label">Type kriteria :</label>
+              <label for="example-text-input" class="col-md-2 col-form-label">Nama kriteria :</label>
               <div class="col-md-10">
-              <input class="form-control" type="text" name="type_kriteria" value="{{$find->type_kriteria}}" id="example-text-input" placeholder="masukan type kriteria">
+              <input class="form-control" type="text" name="nama_kriteria" value="{{$find->nama_kriteria}}" id="example-text-input" placeholder="masukan nama kriteria">
               </div>
           </div>
+          
+          <div class="mb-3 row">
+            <label class="col-md-2 col-form-label">Jenis :</label>
+            <div class="col-md-10">
+                <select class="form-select" name="jenis" value="{{$find->jenis}}" required value="{{ old('jenis')}}" id="example-text-input" >
+                    <optgroup label="Pilih Jenis">
+                    <option>Benefit</option>
+                    <option>Cost</option>
+                </select>
+            </div> </div> 
+            
+            <div class="mb-3 row">
+                <label for="example-text-input" class="col-md-2 col-form-label">Bobot :</label>
+                <div class="col-md-10">
+                <input class="form-control" type="number" name="bobot" value="{{$find->bobot}}" required value="{{ old('bobot')}}" id="example-text-input" placeholder="nilai bobot">
+                </div>
+            </div>
+                </div> </div>
+             </div>
 
 		      {{-- <div class="mb-3 row">
 		       

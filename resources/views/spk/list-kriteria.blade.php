@@ -37,8 +37,10 @@
                         <thead>
                             <tr>
                                  <th>No.</th>
-                                 <th>Kriteria</th>
-                                 <th>Type kriteria</th>
+                                 <th>Kode Kriteria</th>
+                                 <th>Nama kriteria</th>
+                                 <th>Jenis</th>
+                                 <th>Bobot</th>
                                  <th>Action</th>
 
                               
@@ -50,8 +52,10 @@
                            
                             
                             <td>{{ $loop->index + 1 }}</td>
-                            <td>{{ $item->kriteria}}</td>
-                            <td>{{ $item->type_kriteria}}</td>
+                            <td>{{ $item->kode_kriteria}}</td>
+                            <td>{{ $item->nama_kriteria}}</td>
+                            <td>{{ $item->jenis}}</td>
+                            <td>{{ $item->bobot}}</td>
 
                         
 
