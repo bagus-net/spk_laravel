@@ -24,13 +24,16 @@ use PhpParser\Node\Name;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/login', [LoginController::class, 'index'])->name('login');
-Route::post('/login-authenticate', [LoginController::class, 'authenticate'])->name('login-auth');
 
-Route::get('/register', [RegisterController::class, 'index'])->name('register');
+// Auth::routes();
+Route::get('/login', [LoginController::class, 'index'])->name('login')-> middleware('guest');
+Route::post('/login-authenticate', [LoginController::class, 'authenticate'])->name('login-auth');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::get('/register', [RegisterController::class, 'index'])->name('register')-> middleware('guest');;
 Route::post('/register-store', [RegisterController::class, 'store'])->name('register-add');
 
-Route::get('alternatif', [AlternatifController::class, 'index'])->name('alternatif.list');
+Route::get('alternatif', [AlternatifController::class, 'index'])->name('alternatif.list')->middleware('auth');
 Route::get('alternatif/show/{id}', [AlternatifController::class, 'show'])->name('alternatif.show');
 Route::get('alternatif/add', [AlternatifController::class, 'create'])->name('alternatif.create');
 Route::post('alternatif/store', [AlternatifController::class, 'store'])->name('alternatif.add');
